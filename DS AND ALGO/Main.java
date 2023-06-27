@@ -8,6 +8,7 @@ public class Main{
         myLL.append(4);
         myLL.append(9);
         myLL.append(12);
+        myLL.append(15);
         System.out.println(myLL);
 
        // myLL.removeFirst();
