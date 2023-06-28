@@ -116,19 +116,32 @@ public class MyLL {
         Node prev=head;
         Node after=head.next;
         Node temp=head;
-
+int i=0;
         while(after!=null){
-            System.out.println("Before any operation i) prev.value: "+ prev.value +" temp.value: "+temp.value+" after.value : "+ after.value );
+            if(i==5) break;
+            System.out.println("Before any operation "+ ++i +" prev.value: "+ prev.value +" temp.value: "+temp.value+" after.value : "+ after.value );
             temp=prev.next;
-            System.out.println(after.value);
+            //System.out.println(after.value);
             after=temp.next;
             temp.next=prev;
-            prev.next=null;
+            //prev.next=after;
             prev=temp;
-            System.out.println("After all operation i) prev.value: "+ prev.value +" temp.value: "+temp.value+" after.value : "+ after.value );
+            System.out.println("After all operation "+i+") prev.next.value: "+ prev.next.value +" prev.value: "+ prev.value+" temp.value: "+temp.value+" after.value : "+ after.value );
         }
         head=prev;
 
+    }
+    public void reverse2(){
+        Node temp=head;
+        head=tail;
+        tail=temp;
+        Node prev=null,after=null;
+        while(temp!=null){
+            after=temp.next;
+            temp.next=prev;
+            prev=temp;
+            temp=after;
+        }
     }
    
 

@@ -14,7 +14,7 @@ public class Main{
        // myLL.removeFirst();
         //myLL.removelast();
         //myLL.insert(2, 7);
-        myLL.reverse();
+        myLL.reverse2();
         System.out.println("ruko");
         System.out.println(myLL);
         // ArrayList<Integer> arr=new ArrayList<>();
